@@ -11,9 +11,9 @@
     <h1>Палиндром</h1>
     <input type="text" name="sentence">
     <h1>Самое длинное слово</h1>
-    <input type="text" name="words">
+    <input type="text" name="long">
     <h1>Колличество строчных и прописных букв</h1>
-    <input type="text" name="words">
+    <input type="text" name="letters">
     <h1></h1>
     <button type="submit"> Send </button>
 </form>
