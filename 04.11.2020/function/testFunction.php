@@ -68,8 +68,8 @@ function longestWord ($long)
     for ($i = 0; $i < count($arr); $i++) {
         if (mb_strlen($arr[$i]) > mb_strlen($max)) {
             $max = $arr[$i];
-        }echo $max;
-    }
+        }
+    }echo $max;
 
 }
 
