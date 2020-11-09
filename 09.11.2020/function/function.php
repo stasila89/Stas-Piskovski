@@ -1,6 +1,8 @@
 <?php
 //ДЗ на 04.11.2020  Создать форму отправки данных из которой отправляется текст с выбранной функцией//
+include_once 'test.php';
 ?>
+
 
     <form action="" method="post">
         <input type="text" name="text1">
@@ -18,4 +20,5 @@
 echo "<br>";
 echo "<br>";
 echo "<br>";
+
 
