@@ -9,8 +9,8 @@
 
 function funcSpaces($text)
 {
-    $withoutSpaces = preg_replace('/\s+/', ' ', $text); // preg_replace - Выполняет поиск и замену по регулярному выражению; \s - убирает лишние пробелы; + - убирает табы.
-    return $withoutSpaces;
+    $text = preg_replace('/\s+/', ' ', $text); // preg_replace - Выполняет поиск и замену по регулярному выражению; \s - убирает лишние пробелы; + - убирает табы.
+    return $text;
 }
 
 echo "<br>";
@@ -22,7 +22,7 @@ echo "<br>";
 function shortWords($text)
 {
 
-    $text = explode("", $text); // explode — Разбивает строку с помощью разделителя
+    $text = explode(" ", $text); // explode — Разбивает строку с помощью разделителя
     $count = count($text);
     for ($i = 0; $i < $count; $i++) {
         if (mb_strlen($text[$i]) >= 3 and mb_strlen($text[$i]) <= 5) {
@@ -42,12 +42,12 @@ echo "<br>";
 function palindrome($text)
 {
 
-    $noSpaces = str_replace(' ', '', $text);
-    $reverse = strrev($noSpaces);
+    $text = str_replace(' ', '', $text);
+    $reverse = strrev($text);
     echo $reverse;
     echo "<br>";
 
-    if ($noSpaces == $reverse) {
+    if ($text == $reverse) {
         return "Палиндром";
     } else {
         return 'Не палиндром';
@@ -84,13 +84,13 @@ echo "<br>";
 function capitalLetter($text)
 {
     $lowercase = preg_replace('/[A-Z|А-Я]/', '', $text);
-    $numberOfLowercase = strlen(str_replace(' ', '', $lowercase));
-    return 'Количетсво строчных букв  ' . $numberOfLowercase;
+    $numberOfLowercase = mb_strlen(str_replace(' ', '', $lowercase));
+    return 'Прописных';
+    return $numberOfLowercase;
     echo "<br>";
-
     $capitalLetter = preg_replace('/[a-z|а-я]/', '', $text);
-    $numberOfCapitalLetter = strlen(str_replace(' ', '', $capitalLetter));
-    return 'Количество заглавных букв  ' . $numberOfCapitalLetter;
+    $numberOfCapitalLetter = mb_strlen(str_replace(' ', '', $capitalLetter));
+    return 'Заглавных';
+    return $numberOfCapitalLetter;
 }
 
-echo "<br>";
