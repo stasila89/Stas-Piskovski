@@ -2,7 +2,7 @@
 //ДЗ на 04.11.2020 Создать файл обработчик и вывести результат выбранной функции
 include_once './testFunction.php';
 if (!empty($_POST)){
-    $text =$_POST['str'];
+    $text =$_POST['text1'];
     $nameOfFunction = $_POST['nameOfFunction'];
 
     if ($nameOfFunction == 'funcSpaces'){
