@@ -76,11 +76,6 @@ Duis in ullamcorper leo. Nam a mollis ipsum. Lorem ipsum dolor sit amet, consect
 Nunc eu velit at nulla ornare tincidunt sed ac ligula. Integer congue urna in felis hendrerit blandit. Mauris lorem massa, vehicula id scelerisque nec, feugiat in mauris. Praesent consectetur suscipit turpis non malesuada. Donec elementum turpis eros, et euismod nulla tincidunt ac. Ut tempor massa a tellus tincidunt, id laoreet sem finibus. Ut magna justo, dictum auctor lectus quis, imperdiet gravida enim. Pellentesque at vulputate lacus, non tincidunt dolor.',
 
     ],
-    [
-        'id' => 5,
-        'title' => 'Форма для ДЗ',
-        'content' => 'При открытии данной страницы, введите текст и выберите функцию!',
 
-    ],
 
 ];

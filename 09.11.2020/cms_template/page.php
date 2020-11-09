@@ -9,4 +9,6 @@ foreach ($data as $page) :
     endif;
 endforeach;
 ?>
+<?php
+
 

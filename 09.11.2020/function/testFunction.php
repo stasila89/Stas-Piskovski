@@ -7,27 +7,27 @@
 // а после последнего слова пробелы удаляются (пробелы перед первым словом сохраняются).
 // Сжатый текст записать в другую переменную. Если строка содержит только пробелы, то все они сохраняются.
 
-function funcSpaces ($spaces)
+function funcSpaces($text)
 {
-    $withoutSpaces = preg_replace('/\s+/', ' ', $spaces); // preg_replace - Выполняет поиск и замену по регулярному выражению; \s - убирает лишние пробелы; + - убирает табы.
-    echo $withoutSpaces;
+    $withoutSpaces = preg_replace('/\s+/', ' ', $text); // preg_replace - Выполняет поиск и замену по регулярному выражению; \s - убирает лишние пробелы; + - убирает табы.
     return $withoutSpaces;
 }
+
 echo "<br>";
 echo "<br>";
 echo "<br>";
 
 //2)В произвольном тексте найти и вывести на экран все слова длина которых
 //// не менее трёх символов и не более пяти.
-function shortWords ($words)
+function shortWords($text)
 {
 
-    $array = explode(" ", $words); // explode — Разбивает строку с помощью разделителя
-    $count = count($array);
+    $text = explode("", $text); // explode — Разбивает строку с помощью разделителя
+    $count = count($text);
     for ($i = 0; $i < $count; $i++) {
-        if (mb_strlen($array[$i]) >= 3 and mb_strlen($array[$i]) <= 5) {
-            echo $array[$i];
-            echo "";
+        if (mb_strlen($text[$i]) >= 3 and mb_strlen($text[$i]) <= 5) {
+            return $text[$i];
+            return "";
         }
     }
 }
@@ -39,20 +39,21 @@ echo "<br>";
 ////3)Вводится строка. Удалить из нее все пробелы. После этого определить, является ли она палиндромом (перевертышем),
 //// т.е. одинаково пишется как с начала, так и с конца.
 ////
-function palindrome($sentence)
+function palindrome($text)
 {
 
-    $noSpaces = str_replace(' ', '', $sentence);
+    $noSpaces = str_replace(' ', '', $text);
     $reverse = strrev($noSpaces);
     echo $reverse;
     echo "<br>";
 
     if ($noSpaces == $reverse) {
-        echo "Палиндром";
+        return "Палиндром";
     } else {
-        echo 'Не палиндром';
+        return 'Не палиндром';
     }
 }
+
 echo "<br>";
 echo "<br>";
 echo "<br>";
@@ -61,15 +62,16 @@ echo "<br>";
 ////Случай, когда самых длинных слов может быть несколько, не обрабатывать.
 ////Можно попробовать сделать через массив
 
-function longestWord ($long)
+function longestWord($text)
 {
-    $arr = explode(" ", $long);
+    $arr = explode(" ", $text);
     $max = $arr[0];
     for ($i = 0; $i < count($arr); $i++) {
         if (mb_strlen($arr[$i]) > mb_strlen($max)) {
             $max = $arr[$i];
         }
-    }echo $max;
+    }
+    return $max;
 
 }
 
@@ -79,15 +81,16 @@ echo "<br>";
 //
 ////5)Посчитать количество строчных и прописных букв в строке
 //
-function capitalLetter ($letters)
+function capitalLetter($text)
 {
-    $lowercase = preg_replace('/[A-Z|А-Я]/', '', $letters);
+    $lowercase = preg_replace('/[A-Z|А-Я]/', '', $text);
     $numberOfLowercase = strlen(str_replace(' ', '', $lowercase));
-    echo 'Количетсво строчных букв  ' . $numberOfLowercase;
+    return 'Количетсво строчных букв  ' . $numberOfLowercase;
     echo "<br>";
 
-    $capitalLetter = preg_replace('/[a-z|а-я]/', '', $letters);
+    $capitalLetter = preg_replace('/[a-z|а-я]/', '', $text);
     $numberOfCapitalLetter = strlen(str_replace(' ', '', $capitalLetter));
-    echo 'Количество заглавных букв  ' . $numberOfCapitalLetter;
+    return 'Количество заглавных букв  ' . $numberOfCapitalLetter;
 }
+
 echo "<br>";

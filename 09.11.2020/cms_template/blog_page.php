@@ -27,6 +27,7 @@ Posted on January 1, 2020 by
         </div>
 
           <?php endforeach; ?>
+          <?php include_once './function/function.php'; ?>
 
 
         <!-- Pagination -->
