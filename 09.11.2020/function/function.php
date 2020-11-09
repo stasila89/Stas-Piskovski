@@ -3,7 +3,7 @@
 ?>
 
     <form action="" method="post">
-        <input type="text" name="text">
+        <input type="text" name="text1">
         <select name="nameOfFunction" id="">
             <option value="funcSpaces">Без пробелов</option>
             <option value="shortWords">Слова с 3-5 буквами</option>
