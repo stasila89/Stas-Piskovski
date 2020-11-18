@@ -1,4 +1,7 @@
 <?php
 echo "Админка";
 ?>
-<button> добавить статью</button>
+<form action="admin.php" method="post">
+    <button> добавить статью</button>
+
+</form>
